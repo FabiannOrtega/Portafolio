@@ -1,0 +1,233 @@
+/* ==========================================================================
+   MOBILE (0px - 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  :root {
+    --nav-height: 65px;
+  }
+
+  /* NAVBAR */
+  nav {
+    height: var(--nav-height);
+    padding: 0 20px;
+  }
+
+  /* BOTÓN HAMBURGUESA */
+  .menu-btn {
+    display: flex;
+  }
+
+  /* MENÚ LATERAL */
+  .menu {
+    position: fixed;
+    top: var(--nav-height);
+    right: -100%;
+    width: 75%;
+    height: calc(100vh - var(--nav-height));
+
+    background: black;
+    padding: 30px;
+
+    transition: right .4s ease;
+    border-left: 1px solid var(--glass-border);
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: var(--nav-height);
+    min-height: 70vh;
+    padding: 100px 20px 60px;
+    text-align: center;
+
+    /* En móviles no usamos parallax */
+    background-attachment: scroll;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* SCROLL */
+  #inicio,
+  #servicios,
+  #habilidades,
+  #contacto {
+    scroll-margin-top: calc(var(--nav-height) + 15px);
+  }
+
+  /* SERVICIOS */
+  .servicios-empresariales {
+    padding: 60px 20px;
+  }
+
+  .header-empresarial h2 {
+    font-size: 32px;
+  }
+
+  .lista-servicios {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 60px 20px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CONTACTO */
+  .contact {
+    padding: 80px 20px;
+  }
+
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ==========================================================================
+   TABLET Y DESKTOP (768px+)
+   ========================================================================== */
+@media (min-width: 768px) {
+
+  :root {
+    --nav-height: 80px;
+  }
+
+  nav {
+    height: var(--nav-height);
+    padding: 0 20px;
+  }
+
+  /* OCULTAR HAMBURGUESA */
+  .menu-btn {
+    display: none;
+  }
+
+  /* MENÚ HORIZONTAL */
+  .menu {
+    position: static;
+    right: auto;
+    width: auto;
+    height: auto;
+
+    background: transparent;
+    /* IMPORTANTE */
+
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: var(--nav-height);
+    min-height: 80vh;
+    padding: 140px 8% 80px;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+    max-width: 650px;
+  }
+
+  /* SCROLL */
+  #inicio,
+  #servicios,
+  #habilidades,
+  #contacto {
+    scroll-margin-top: calc(var(--nav-height) + 20px);
+  }
+
+  /* SERVICIOS */
+  .servicios-empresariales {
+    padding: 80px 5%;
+  }
+
+  .lista-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 80px 5%;
+  }
+
+  .skills-container {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .skill-card {
+    flex: 1 1 calc(50% - 25px);
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-item {
+    width: auto;
+  }
+}
+
+
+/* ==========================================================================
+   DESKTOP (1024px+)
+   ========================================================================== */
+@media (min-width: 1024px) {
+
+  .hero {
+    background-attachment: fixed;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    max-width: 700px;
+  }
+
+  .lista-servicios {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .skills-container {
+    flex-wrap: nowrap;
+  }
+
+  .skill-card {
+    flex: 1;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}

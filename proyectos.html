@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabián Ortega | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="proyectos.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html#inicio" class="logo">Fabián Ortega</a>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <div class="menu" id="menu">
+            <a href="index.html#inicio" class="translate" data-es="Inicio" data-en="Home">Inicio</a>
+            <a href="index.html#servicios" class="translate" data-es="Servicios" data-en="Services">Servicios</a>
+            <a href="proyectos.html" class="active translate" data-es="Proyectos" data-en="Projects">Proyectos</a>
+            <a href="index.html#habilidades" class="translate" data-es="Habilidades" data-en="Skills">Habilidades</a>
+            <a href="index.html#contacto" class="translate" data-es="Contacto" data-en="Contact">Contacto</a>
+            <a href="#" id="btn-lang">🔄En</a>
+        </div>
+    </nav>
+    <br>
+    <br />
+
+    <section class="hero2">
+        <h1>
+            <span class="translate" data-es="Mis Proyectos" data-en="My Projects">
+                Mis Proyectos
+            </span>
+        </h1>
+
+        <p class="translate" data-es="Portafolio de soluciones técnicas." data-en="Portfolio of technical solutions.">
+            Portafolio de soluciones técnicas.
+        </p>
+    </section>
+    <section class="skills">
+        <!-- NOMINASUITE -->
+        <article class="skill-card">
+
+            <div class="project-image">
+                <img src="" alt="NominaSuite">
+            </div>
+
+            <div class="project-content">
+
+                <h3>NominaSuite</h3>
+
+                <div class="project-info">
+                    <h4 class="translate" data-es="Reseña" data-en="Overview">
+                        Reseña
+                    </h4>
+
+                    <p class="translate"
+                        data-es="Sistema de gestión de nómina que permite registrar entradas y salidas de empleados, calcular salarios automáticamente y generar reportes administrativos."
+                        data-en="Payroll management system that tracks attendance, calculates salaries automatically and generates administrative reports.">
+
+                        Sistema de gestión de nómina que permite registrar entradas y salidas de empleados, calcular
+                        salarios automáticamente y generar reportes administrativos.
+                    </p>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="translate" data-es="Tecnologías" data-en="Technologies">
+                        Tecnologías
+                    </h4>
+
+                    <p>C#, .NET 10, Blazor, PostgreSQL, Entity Framework,Css</p>
+                </div>
+
+                <div class="project-actions">
+                    <a href="#" class="btn">
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </a>
+
+                    <a href="#" class="btn">
+                        YouTube
+                    </a>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- CARNET DIGITAL -->
+        <article class="skill-card">
+
+            <div class="project-image">
+                <img src="img/CarnetDigitalMovil.PNG" alt="Carnet Digital">
+            </div>
+
+            <div class="project-content">
+
+                <h3 class="translate" data-es="Carnet Digital" data-en="Digital ID">
+                    Carnet digital móvil
+                </h3>
+
+                <div class="project-info">
+                    <h4 class="translate" data-es="Reseña" data-en="Overview">
+                        Reseña
+                    </h4>
+
+                    <p class="translate"
+                        data-es="Aplicación móvil híbrida que permite a los usuarios acceder a una institución mediante un carnet digital con fotografía y validación mediante código QR."
+                        data-en="Hybrid mobile application that allows users to access an institution through a digital ID card with photo and QR validation.">
+
+                        Aplicación móvil híbrida para Android y iOS que permite a los usuarios acceder a una institución
+                        mediante un carnet
+                        digital el cual posee los datos y fotografía ademas de la validación mediante código QR.
+                    </p>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="translate" data-es="Tecnologías" data-en="Technologies">
+                        Tecnologías
+                    </h4>
+                    <p>Flutter, Dart, Ocelot Gateway</p>
+                </div>
+
+                <div class="project-actions">
+                    <a href="#" class="btn">
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </a>
+                    <a href="#" class="btn">
+                        YouTube
+                    </a>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="skill-card">
+
+            <div class="project-image">
+                <img src="img/CarnetDigital.PNG" alt="Carnet Digital">
+            </div>
+
+            <div class="project-content">
+
+                <h3 class="translate" data-es="Carnet Digital - Sitio Web Administrativo"
+                    data-en="Digital ID - Administrative Website">
+                    Carnet Digital - Sitio Web Administrativo
+                </h3>
+
+                <div class="project-info">
+                    <h4 class="translate" data-es="Reseña" data-en="Overview">
+                        Reseña
+                    </h4>
+
+                    <p class="translate"
+                        data-es="Este sitio web administrativo del proyecto Carnet Digital permite gestionar 9 microservicios, tales como usuarios, estados, tipos de usuario, carreras, áreas, fotografía y validación QR."
+                        data-en="This administrative website for the Digital ID project manages 9 microservices, including users, statuses, user types, careers, areas, photography, and QR validation.">
+                        Este sitio web administrativo del proyecto Carnet Digital permite gestionar 8 microservicios,
+                        tales como usuarios, estados, tipos de usuario, carreras, áreas, fotografía y validación QR.
+                    </p>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="translate" data-es="Tecnologías" data-en="Technologies">
+                        Tecnologías
+                    </h4>
+
+                    <p>
+                        C#, .Net Core 8, Razor Pages, Bootstrap, CSS, Microservicios, Web Service REST, Postman, JWT,
+                        SQL Server, JavaScript
+                    </p>
+                </div>
+
+                <div class="project-actions">
+                    <a href="#" class="btn">
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </a>
+
+                    <a href="#" class="btn">
+                        <i class="devicon-youtube-original"></i>
+                        YouTube
+                    </a>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- SPRING.VAL -->
+        <article class="skill-card">
+
+            <div class="project-image">
+                <img src="img/springval.webp" alt="Spring.val">
+            </div>
+
+            <div class="project-content">
+
+                <h3>Spring.val</h3>
+
+                <div class="project-info">
+                    <h4 class="translate" data-es="Reseña" data-en="Overview">
+                        Reseña
+                    </h4>
+
+                    <p class="translate"
+                        data-es="Sistema de gestión de activos empresariales que permite registrar bienes, administrar inventarios y calcular depreciaciones financieras."
+                        data-en="Enterprise asset management platform that registers assets, manages inventories and calculates financial depreciation.">
+
+                        Sistema de gestión de activos empresariales que permite registrar bienes, administrar
+                        inventarios y calcular depreciaciones financieras.
+
+                    </p>
+                </div>
+
+                <div class="project-tech">
+                    <h4 class="translate" data-es="Tecnologías" data-en="Technologies">
+                        Tecnologías
+                    </h4>
+
+                    <p>Java 17, Spring Boot, Spring Security, MySQL,JavaScript,Css</p>
+                </div>
+
+                <div class="project-actions">
+                    <a href="#" class="btn">
+                        <i class="devicon-github-original"></i>
+                        GitHub
+                    </a>
+
+                    <a href="#" class="btn">
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer">
+            <p class="translate" data-es="© 2026 Desarrollado por Fabián Ortega"
+                data-en="© 2026 Developed by Fabián Ortega">© 2026 Desarrollado por Fabián Ortega</p>
+        </footer>
+
+        <script src="menu.js"></script>
+        <script src="traduccion.js"></script>
+        <script src="modal_img.js"></script>
+
+        <div id="imageModal" class="custom-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="imgTarget">
+        </div>
+</body>
+
+</html>

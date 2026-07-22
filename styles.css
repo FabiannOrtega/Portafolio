@@ -1,0 +1,438 @@
+/* =========================================
+   VARIABLES & RESET
+   ========================================= */
+:root {
+  --primary: #ffffff;
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #e0e0e0;
+  --gray-accent: #888;
+  --blue: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tahoma';
+  background: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.servicios-empresariales,
+.skills,
+.contact {
+  min-height: 100vh;
+  padding: 100px 20px;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 1px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Tahoma';
+  color: var(--primary);
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color .3s ease;
+}
+
+.menu {
+  position: fixed;
+  top: 65px;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: black;
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 1px solid var(--glass-border);
+}
+
+.menu.active {
+  right: 0;
+}
+
+.menu a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  margin: 25px 0;
+  font-size: 18px;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#inicio,
+#servicios,
+#habilidades,
+#contacto {
+  scroll-margin-top: 110px;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+  margin-top: 80px;
+  min-height: 80vh;
+  padding: 140px 10% 80px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  background:
+    linear-gradient(rgba(29, 24, 18, 0.65), rgba(0, 0, 0, 0.65)),
+    url("img/pc.png") no-repeat center center/cover;
+
+  background-attachment: fixed;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: white;
+  line-height: 1.1;
+  animation: heroTitle 1.2s ease-out forwards;
+}
+
+@keyframes heroTitle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero span {
+  color: rgb(8, 117, 194);
+  font-style: italic;
+}
+
+.hero .linea-blanca {
+  color: white;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--blue);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(35px);
+  border-radius: 70px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+/* =========================================
+   SERVICIOS
+   ========================================= */
+.servicios-empresariales {
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 100%;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(5, 119, 200, 0.26) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(10, 141, 174, 0.1) 0%, transparent 60%),
+    var(--bg-dark);
+}
+
+/* Encabezado */
+.header-empresarial {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.header-empresarial h2 {
+  font-family: 'Tahoma';
+  font-size: 38px;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.header-empresarial p {
+  font-size: 16px;
+  color: var(--gray-accent);
+}
+
+/* Grid */
+.lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Tarjetas */
+.servicio-item {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  padding: 35px 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  border-color: rgba(10, 114, 174, 0.822);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.servicio-item h3 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.servicio-item:hover h3 {
+  color: rgb(8, 117, 194);
+}
+
+.servicio-item p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   SKILLS
+   ========================================= */
+.skills {
+  cursor: pointer;
+  border-radius: 50px 50px 0 0;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.skills-container {
+  display: flex;
+  gap: 25px;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  padding: 35px 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  flex: 1;
+}
+
+@media (hover: hover) {
+  .skill-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(10, 114, 174, 0.822);
+    box-shadow: 0 15px 30px rgba(10, 114, 174, 0.086);
+  }
+}
+
+.skill-card h3 {
+  color: var(--primary);
+  margin-bottom: 25px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+}
+
+.tech__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: 0.3s;
+}
+
+.tech__item i {
+  font-size: 38px;
+  color: var(--primary);
+}
+
+.tech__item span {
+  font-size: 12px;
+  color: var(--gray-accent);
+  text-align: center;
+}
+
+/* =========================================
+   CONTACTO
+   ========================================= */
+.contact {
+  padding: 100px 40px;
+  text-align: center;
+  background: var(--bg-card);
+  border-top: 1px solid var(--glass-border);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: var(--bg-card);
+  border-radius: 80px;
+  color: rgb(10, 97, 168);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-item:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.contact-item i {
+  font-size: 20px;
+}
+
+.contact__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: floatParticle var(--duration) linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: var(--opacity);
+  }
+
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-accent);
+}

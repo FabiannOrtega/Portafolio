@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabián Ortega | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print"
+        onload="this.media='all'">
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Menú principal">
+            <a href="#inicio" class="logo">Fabián Ortega</a>
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+            <div class="menu" id="menu">
+                <a href="#inicio" class="translate" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="#servicios" class="translate" data-es="Enfoque" data-en="Approach">Enfoque</a>
+                <a href="proyectos.html" class="translate" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#habilidades" class="translate" data-es="Habilidades" data-en="Skills">Habilidades</a>
+                <a href="#contacto" class="translate" data-es="Contacto" data-en="Contact">Contacto</a>
+                <a href="#" id="btn-lang">🔄En</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>
+                    <span class="translate" data-es="Transformando ideas en"
+                        data-en="Transforming ideas into">Transformando ideas en</span>
+                    <br>
+                    <span class="linea-blanca translate" data-es="soluciones digitales"
+                        data-en="digital solutions">soluciones digitales</span>
+                </h1>
+                <p class="translate" data-es="Desarrollo de software." data-en="Software development.">Desarrollo de
+                    software.</p>
+                <a href="#contacto" class="btn translate" data-es="Hablemos de tu idea"
+                    data-en="Let's talk about your idea">Hablemos de tu idea</a>
+            </div>
+        </section>
+
+        <section id="servicios" class="servicios-empresariales">
+            <div class="header-empresarial">
+                <h2>
+                    <span class="translate" data-es="Enfoque" data-en="Approach">Enfoque</span>
+                </h2>
+                <p class="translate"
+                    data-es="Combino una gran pasión por la ingeniería de software, pensamiento crítico e innovación para construir soluciones que generen un impacto real y maximicen el valor de cada solución."
+                    data-en="I combine a strong passion for software engineering, critical thinking, and innovation to build solutions that generate a real impact and maximize the value of each solution.">
+                    Combino una gran pasión por la ingeniería de software, pensamiento crítico e innovación para
+                    construir soluciones que generen un impacto real y maximicen el valor de cada solución.
+                </p>
+            </div>
+
+            <div class="lista-servicios">
+
+                <article class="servicio-item">
+                    <h3 class="translate" data-es="Sinergia, comunicación y equipo"
+                        data-en="Synergy, communication and teamwork">Sinergia, comunicación y equipo</h3>
+                    <p class="translate"
+                        data-es="Asumo cada reto con responsabilidad, comunicación asertiva, escucha activa, empatía y adaptabilidad para resolver problemas en equipo."
+                        data-en="I approach every challenge with responsibility, assertive communication, active listening, empathy, and adaptability to solve problems within a team.">
+                        Asumo cada reto con responsabilidad, comunicación asertiva, escucha activa, empatía y
+                        adaptabilidad para resolver problemas en equipo.
+                    </p>
+                </article>
+
+                <article class="servicio-item">
+                    <h3 class="translate" data-es="Desarrollo de software" data-en="Full-stack development">Desarrollo
+                        de software</h3>
+                    <p class="translate"
+                        data-es="Desarrollo aplicaciones robustas utilizando las mejores prácticas y estándares eficientes, abarcando tanto frontend como backend en sistemas web, móviles, de escritorio y microservicios."
+                        data-en="I develop robust applications using best practices and efficient standards, covering both frontend and backend in web, mobile, desktop, and microservices systems.">
+                        Desarrollo aplicaciones robustas utilizando las mejores prácticas y estándares eficientes
+                        abarcando tanto frontend como backend en sistemas web, móviles, de escritorio y microservicios.
+                    </p>
+                </article>
+
+                <article class="servicio-item">
+                    <h3 class="translate" data-es="Calidad, transparencia e integridad"
+                        data-en="Quality, transparency and integrity">
+                        Calidad, transparencia e integridad
+                    </h3>
+                    <p class="translate"
+                        data-es="Tengo un gran compromiso con la calidad, la transparencia y la integridad en cada proceso, impulsado además por la ética profesional y el aprendizaje continuo para asegurar el éxito del proyecto."
+                        data-en="I have a strong commitment to quality, transparency, and integrity in every process, driven also by professional ethics and continuous learning to ensure the project's success.">
+                        Tengo un gran compromiso con la calidad, la transparencia y la integridad en cada proceso,
+                        impulsado además por la ética profesional y el aprendizaje continuo para asegurar el éxito del
+                        proyecto.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills">
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3 class="translate" data-es="Backend & bases de datos" data-en="Backend & databases">Backend &
+                        bases de datos</h3>
+                    <div class="tech-grid">
+                        <div class="tech__item"><i class="devicon-csharp-plain" aria-hidden="true"></i><span>C#</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-python-plain"
+                                aria-hidden="true"></i><span>Python</span></div>
+                        <div class="tech__item"><i class="devicon-java-plain" aria-hidden="true"></i><span>Java</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-php-plain" aria-hidden="true"></i><span>PHP</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-mysql-plain" aria-hidden="true"></i><span>MySQL</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-postgresql-plain"
+                                aria-hidden="true"></i><span>PostgreSQL</span></div>
+                        <div class="tech__item"><i class="devicon-mongodb-plain"
+                                aria-hidden="true"></i><span>MongoDB</span></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="translate" data-es="Frontend web & móvil" data-en="Web & mobile frontend">Frontend web &
+                        móvil</h3>
+                    <div class="tech-grid">
+                        <div class="tech__item"><i class="devicon-react-original"
+                                aria-hidden="true"></i><span>React</span></div>
+                        <div class="tech__item"><i class="devicon-angular-plain"
+                                aria-hidden="true"></i><span>Angular</span></div>
+                        <div class="tech__item"><i class="devicon-javascript-plain"
+                                aria-hidden="true"></i><span>JavaScript</span></div>
+                        <div class="tech__item"><i class="devicon-flutter-plain"
+                                aria-hidden="true"></i><span>Flutter</span></div>
+                        <div class="tech__item"><i class="devicon-html5-plain" aria-hidden="true"></i><span>HTML5</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-css3-plain" aria-hidden="true"></i><span>CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 class="translate" data-es="Herramientas" data-en="Tools">Herramientas</h3>
+                    <div class="tech-grid">
+                        <div class="tech__item"><i class="devicon-git-plain" aria-hidden="true"></i><span>Git</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-docker-plain"
+                                aria-hidden="true"></i><span>Docker</span></div>
+                        <div class="tech__item"><i class="devicon-github-original"
+                                aria-hidden="true"></i><span>GitHub</span></div>
+                        <div class="tech__item"><i class="devicon-postman-plain"
+                                aria-hidden="true"></i><span>Postman</span></div>
+                        <div class="tech__item"><i class="devicon-microsoftsqlserver-plain"
+                                aria-hidden="true"></i><span>SQL Server</span></div>
+                        <div class="tech__item"><i class="devicon-linux-plain" aria-hidden="true"></i><span>Linux</span>
+                        </div>
+                        <div class="tech__item"><i class="devicon-r-plain" aria-hidden="true"></i><span>R</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div id="contactParticles" class="contact__particles"></div>
+            <h2 class="translate" data-es="Contacto" data-en="Contact">Contacto</h2>
+
+            <div class="contact-links">
+                <a href="https://cr.linkedin.com/in/fabi%C3%A1n-ortega-61951026a" target="_blank" rel="noopener"
+                    class="contact-item">
+                    <i class="devicon-linkedin-plain" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="translate" data-es="© 2026 Desarrollado por Fabián Ortega"
+            data-en="© 2026 Developed by Fabián Ortega">© 2026 Desarrollado por Fabián Ortega</p>
+    </footer>
+
+    <script src="menu.js" defer></script>
+    <script src="particula.js" defer></script>
+    <script src="traduccion.js" defer></script>
+</body>
+
+</html>
