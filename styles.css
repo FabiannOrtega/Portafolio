@@ -140,7 +140,7 @@ html {
 
   background:
     linear-gradient(rgba(29, 24, 18, 0.65), rgba(0, 0, 0, 0.65)),
-    url("img/pc.png") no-repeat center center/cover;
+    url("img/background.jpeg") no-repeat center center/cover;
 
   background-attachment: fixed;
 }
@@ -278,6 +278,24 @@ html {
   line-height: 1.6;
 }
 
+/* animación de aparición card */
+.servicio-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.servicio-item.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.servicio-item:nth-child(1) { transition-delay: 0.1s; }
+.servicio-item:nth-child(2) { transition-delay: 0.2s; }
+.servicio-item:nth-child(3) { transition-delay: 0.3s; }
+
+
 /* animación de aparición skills - card */
 /* Definimos la animación de aparición */
 @keyframes fadeInUp {
@@ -320,8 +338,25 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   -webkit-tap-highlight-color: transparent;
+  animation: scrollFadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
 
+.skills-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(10, 114, 174, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  transform: translate(-50%, 0);
+  z-index: -1;
+  pointer-events: none;
+  will-change: transform;
+}
 .skills-container {
   display: flex;
   gap: 25px;
