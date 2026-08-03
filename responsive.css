@@ -231,3 +231,14 @@
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 }
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
