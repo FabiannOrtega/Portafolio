@@ -502,3 +502,27 @@ html {
   font-size: 0.85rem;
   color: var(--gray-accent);
 }
+/* =========================================
+  SCROLL
+   radial-gradient(circle, #00aaff 4px, transparent 5px) center 15%,
+   ========================================= */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+   
+    radial-gradient(circle, #0066ff 4px, transparent 5px) center 38%,
+    radial-gradient(circle, #2759a3 4px, transparent 5px) center 62%,
+    radial-gradient(circle, #05276f 4px, transparent 5px) center 85%;
+  background-repeat: no-repeat;
+  background-size: 100% 25%;
+  border-radius: 100px;
+  border: 3px solid transparent;
+}
