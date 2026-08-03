@@ -505,14 +505,9 @@ html {
 /* =========================================
    CUSTOM SCROLL
 ========================================= */
-
-/* =========================================
-   CUSTOM SCROLL
-========================================= */
-
 /* Firefox */
 html {
-  scrollbar-color: #06439d #000000;
+  scrollbar-color: #07316fbb #000000;
   scrollbar-width: thin;
 }
 
@@ -537,7 +532,6 @@ html {
   border-radius: 100px;
   border: 3px solid transparent;
 }
-
 
 /* MÓVIL */
 @media (max-width: 767px) {

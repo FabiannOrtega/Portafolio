@@ -37,20 +37,20 @@
     right: 0;
   }
 
-  /* HERO */
-  .hero {
-    margin-top: var(--nav-height);
-    min-height: 70vh;
-    padding: 100px 20px 60px;
-    text-align: center;
+ /* HERO */
+.hero {
+  margin-top: var(--nav-height);
+  min-height: 70vh;
+  padding: 100px 20px 60px;
+  text-align: center;
 
-    background-attachment: fixed;
-    background-size: 310% auto;
-  background-position: center top;
-  }
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
+}
 
   .hero span {
-    color: #0066ff;
+    color: #0364b4;
   }
 
   .hero h1 {
