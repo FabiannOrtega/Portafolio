@@ -28,9 +28,7 @@
         rgba(10, 97, 168, 0.238),
         transparent 60%
     );
-
     animation:auroraFloat 12s ease-in-out infinite alternate;
-
     pointer-events:none;
 }
 

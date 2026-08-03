@@ -44,12 +44,19 @@
     padding: 100px 20px 60px;
     text-align: center;
 
-    /* En móviles no usamos parallax */
-    background-attachment: scroll;
+    background-attachment: fixed;
+    background-size: 310% auto;
+  background-position: center top;
+  }
+
+  .hero span {
+    color: #0066ff;
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
   }
 
   .hero p {
@@ -230,15 +237,4 @@
   .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
-}
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
-.page {
-  height: 100dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
