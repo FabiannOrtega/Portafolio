@@ -38,19 +38,23 @@
   }
 
  /* HERO */
-.hero {
-  margin-top: var(--nav-height);
-  min-height: 70vh;
-  padding: 100px 20px 60px;
-  text-align: center;
+  .hero {
+    margin-top: var(--nav-height);
+    min-height: 70vh;
+    padding: 100px 20px 60px;
+    text-align: center;
 
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center center;
-}
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
 
   .hero span {
-    color: #0364b4;
+    color: #054687;
+    -webkit-text-stroke: 1px #080449; 
+    text-stroke: 1px #ffffff;
+    
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   .hero h1 {
