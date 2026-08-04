@@ -50,16 +50,12 @@
   }
 
   .hero span {
-    color: #054687;
-    -webkit-text-stroke: 1px #080449; 
-    text-stroke: 1px #ffffff;
-    
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #75b2f8;
   }
 
   .hero h1 {
     font-family: 'Tahoma', sans-serif;
-    font-size: 40px;
+    font-size: 41px;
     font-weight: 900;
   }
 
