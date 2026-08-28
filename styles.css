@@ -291,41 +291,51 @@ html {
   transform: translateY(0);
 }
 
-.servicio-item:nth-child(1) { transition-delay: 0.1s; }
-.servicio-item:nth-child(2) { transition-delay: 0.2s; }
-.servicio-item:nth-child(3) { transition-delay: 0.3s; }
+.servicio-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.servicio-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.servicio-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
 
 /* animación de aparición skills - card */
 /* Definimos la animación de aparición */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Aplicamos la animación a las tarjetas */
 .skill-card {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0; /* Empiezan ocultas */
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  /* Empiezan ocultas */
 }
 
 /* Damos un pequeño retraso (delay) a cada tarjeta para que entren en cascada */
 .skill-card:nth-child(1) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .skill-card:nth-child(2) {
-    animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .skill-card:nth-child(3) {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 /* =========================================
@@ -357,6 +367,7 @@ html {
   pointer-events: none;
   will-change: transform;
 }
+
 .skills-container {
   display: flex;
   gap: 25px;
@@ -493,6 +504,7 @@ html {
     opacity: 0;
   }
 }
+
 /* =========================================
    FOOTER
    ========================================= */
@@ -502,6 +514,7 @@ html {
   font-size: 0.85rem;
   color: var(--gray-accent);
 }
+
 /* =========================================
    CUSTOM SCROLL
 ========================================= */
@@ -551,4 +564,212 @@ html {
     border-radius: 100px;
   }
 
+}
+
+/* =========================================
+   SOLUCIONES
+   ========================================= */
+
+.soluciones {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 8%;
+    background: #ffffff;
+    color: #0b1020;
+    overflow: hidden;
+    
+    /* Ocupa todo el ancho sin márgenes laterales */
+    width: 100%;
+    margin: 0; 
+    
+    /* Redondea únicamente las esquinas superiores, dejando las de abajo rectas */
+    border-radius: 100px 100px 0 0; 
+    scroll-margin-top: 85px;
+}
+
+
+/* =========================================
+   IMAGEN
+   ========================================= */
+
+.soluciones-image {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.soluciones-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .6s ease;
+}
+
+.soluciones-image:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+.soluciones-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.soluciones-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.soluciones-header {
+    margin-bottom: 30px;
+}
+
+.soluciones-label {
+    display: block;
+    color: #1e3a8a; /* <--- Título principal en azul (puedes cambiar el tono) */
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+
+/* =========================================
+   ITEMS
+   ========================================= */
+
+.solucion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(11, 16, 32, .12);
+    transition: padding-left .25s ease;
+}
+
+.solucion-item:first-child {
+    border-top: 1px solid rgba(11, 16, 32, .12);
+}
+
+.solucion-item:hover {
+    padding-left: 6px;
+}
+
+
+/* =========================================
+   ICONOS
+   ========================================= */
+
+.solucion-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b5bdb; /* Azul intermedio para el icono por defecto */
+    transition: color .25s ease;
+}
+
+.solucion-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.solucion-item:hover .solucion-icon {
+    color: #1e3a8a; /* Azul al hacer hover en el icono */
+}
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+.solucion-text {
+    flex: 1;
+}
+
+.solucion-text h3 {
+    margin: 0 0 5px;
+    color: #1e3a8a; /* <--- Subtítulos de cada ítem en azul */
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.solucion-text p {
+    margin: 0;
+    max-width: 450px;
+    color: rgba(30, 58, 138, .75); /* <--- Párrafos con tono azulado suave */
+    font-size: .88rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+    .soluciones {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 70px 40px;
+    }
+
+    .soluciones-content {
+        max-width: none;
+    }
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 600px) {
+    .soluciones {
+        gap: 35px;
+        padding: 55px 25px;
+    }
+
+    .soluciones-label {
+        font-size: 1.9rem;
+    }
+
+    .solucion-item {
+        gap: 14px;
+        padding: 17px 0;
+    }
+
+    .solucion-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .solucion-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .solucion-text h3 {
+        font-size: 1rem;
+    }
+
+    .solucion-text p {
+        font-size: .84rem;
+    }
+
+    .solucion-item:hover {
+        padding-left: 0;
+    }
 }
