@@ -140,7 +140,7 @@ html {
 
   background:
     linear-gradient(rgba(29, 24, 18, 0.65), rgba(0, 0, 0, 0.65)),
-    url("img/background.jpeg") no-repeat center center/cover;
+    url("../img/background.jpeg") no-repeat center center/cover;
 
   background-attachment: fixed;
 }
